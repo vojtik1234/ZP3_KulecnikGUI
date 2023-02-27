@@ -65,6 +65,7 @@ namespace KulecnikGUI
             nums[0] = rnd.Next(0, 285); //pozice sirka
             nums[1] = rnd.Next(0, 239); //pozice vyska
             nums[2] = rnd.Next(-1, 2);  //pohyb sirka
+            if (nums[2] == 0) nums[2] = 1; //at se vsechno hybe
             nums[3] = rnd.Next(-1, 2);  //pohyb vyska
             kulicky.Add(new Kulicka(nums[0], nums[1], nums[2], nums[3]));
         }
