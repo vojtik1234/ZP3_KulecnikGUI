@@ -1,0 +1,1 @@
+KulecnikGUI_zaklad
