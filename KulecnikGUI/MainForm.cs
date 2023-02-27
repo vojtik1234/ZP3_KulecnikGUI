@@ -62,8 +62,8 @@ namespace KulecnikGUI
         public static void PridejKulicku()
         {
             int[] nums = new int[4];
-            nums[0] = rnd.Next(0, 100); //pozice sirka
-            nums[1] = rnd.Next(0, 100); //pozice vyska
+            nums[0] = rnd.Next(0, 285); //pozice sirka
+            nums[1] = rnd.Next(0, 239); //pozice vyska
             nums[2] = rnd.Next(-1, 2);  //pohyb sirka
             nums[3] = rnd.Next(-1, 2);  //pohyb vyska
             kulicky.Add(new Kulicka(nums[0], nums[1], nums[2], nums[3]));
@@ -81,7 +81,8 @@ namespace KulecnikGUI
 
         private void cervenaToolStripMenuItem_Click(object sender, EventArgs e) //nahodny odstin cervene
         {
-            b = new SolidBrush(Color.FromArgb(rnd.Next(255), 0, 0));
+            b = new SolidBrush(Color.FromArgb(rnd.Next(150, 255), 0, 0)); //omezeno na 150-255, moc nizke
+                                                                          //hodnoty vypadaji cerne
         }
 
         private void konecToolStripMenuItem_Click(object sender, EventArgs e) //konec aplikace
